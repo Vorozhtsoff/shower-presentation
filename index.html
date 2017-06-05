@@ -65,9 +65,9 @@
 	<section class="slide">
 		<h2>Бывает и такое...</h2>
 		<pre>
-			<code><mark>#header</mark> .cont .in 
+			<code><mark>#header</mark> .cont .in
 <mark>#block-views-exp-item-search-page</mark>
-.content form 
+.content form
 <mark>#edit-title-wrapper</mark>
 input {
 	<span class="comment">// какие-то стили...</span>
@@ -166,6 +166,43 @@ input {
 		<code>&lt;/nav&gt;</code>
 		</pre>
 		<p class="note next">//элементов элементов не бывает</p>
+	</section>
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="<mark>person</mark>"&gt;</code>
+		<code>	&lt;ul class="<mark>person__head</mark>"&gt;</code>
+		<code>		&lt;li class="<mark>person__face</mark>"&gt;1&lt;/li&gt;</code>
+		<code>		&lt;li class="<mark>person__eye</mark>"&gt;2&lt;/li&gt;</code>
+		<code>		&lt;li class="<mark>person__pupil</mark>"&gt;3&lt;/li&gt;</code>
+		<code>	&lt;/ul&gt;</code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note next">//все элементы - части блока person и отдельно существовать не могут</p>
+	</section>
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="<mark>room</mark>"&gt;</code>
+		<code>	&lt;div class="<mark>room__floor</mark>"&gt;&lt;/div&gt;</code>
+		<code>	&lt;div class="<mark>room__desk</mark>"&gt;</code>
+		<code>		&lt;div class="<mark>room__laptop</mark>"&gt;&lt;/div&gt;</code>
+		<code>	&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note next">//все элементы принадлежат исключительно этой комнате</p>
+	</section>
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="<mark>room</mark>"&gt;</code>
+		<code>	&lt;div class="<mark>room__floor</mark>"&gt;&lt;/div&gt;</code>
+		<code>	&lt;div class="<mark>desk</mark>"&gt;</code>
+		<code>		&lt;div class="<mark>laptop</mark>"&gt;&lt;/div&gt;</code>
+		<code>	&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note next">//верно - desk и laptop могут существовать и вне комнаты</p>
 	</section>
 	<section class="slide">
 		<h2>Немного кода...</h2>
@@ -291,6 +328,50 @@ input {
 		<code>	<mark>ul</mark> {<span class="comment">/* какие-то стили */</span>}</code>
 		<code>}</code>
 		</pre>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Проблемы со стилями:</h2>
+			<ul class="custom-numbered-list">
+				<li class="next active">Инлайн стили</li>
+				<li class="next active">!important</li>
+				<li class="next active">Чрезмерно увеличенный вес селектора</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Ошибки разработчиков:</h2>
+			<ul class="custom-list">
+				<li class="next active">Элемент элемента</li>
+				<li class="next active">Элемент вне блока</li>
+				<li class="next active">Контекстная зависимость блоков</li>
+				<li class="next active">Контекстная зависимость элемента</li>
+				<li class="next active">Наглый модификатор элемента (кроме самого себя трогает еще и другие элементы этого же блока)</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Ошибки разработчиков:</h2>
+			<ul class="custom-numbered-list">
+				<li class="next active">Блок, вложенный в себя</li>
+				<li class="next active">Использование стилевых классов в JS</li>
+				<li class="next active">Использование классов-хелперов «как-бутстрап»: <code>&lt;ul class="list pointer left colorred"&gt;</code></li>
+				<li class="next active">Неиспользование классов-хелперов (модификаторы <code>--float_left</code>)</li>
+				<li class="next active">Одноразовые элементы (создание одинаковых элементов с разными именами типа <code>.list__item1</code>,<code>.list__item2</code>,…)</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Ошибки разработчиков:</h2>
+			<ul class="custom-numbered-list">
+				<li class="next active">Oldschool reborn (высокая специфичность и класс только на блоке)</li>
+				<li class="next active">Looooooooong naming</li>
+				<li class="next active">Модификация элементами (смена имени элемента вместо добавления модификатора)</li>
+			</ul>
+		</div>
 	</section>
 	<section class="slide">
 		<h2>Че почитать?</h2>
