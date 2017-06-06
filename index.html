@@ -15,7 +15,17 @@
 	<section class="slide" id="cover">
 		<h2 class="shout">BEM</h2>
 	</section>
-	<section class="slide">
+	<section class="slide slide--dark sho-bg">
+		<style>
+			.sho-bg {
+				background: #000 url(./pictures/sho.jpg) center no-repeat;
+				background-size: contain;
+			}
+		</style>
+	</section>
+
+
+	<!--<section class="slide">
 		<h2 class="shout">Методологии</h2>
 	</section>
 	<section class="slide">
@@ -28,20 +38,24 @@
 			<li>AMCSS</li>
 		</ol>
 		<p class="note">И много-много других...</p>
-	</section>
+	</section>-->
+
+
 	<section class="slide">
-		<h2>Проблемы:</h2>
-		<ol>
+		<h2>Проблемы написания CSS:</h2>
+		<ol class="next">
 			<li>Сложность поддержки</li>
-			<li class="next">Переиспользование</li>
-			<li class="next">Код-лапша</li>
-			<li class="next">несамодокументированный код</li>
+			<li class="ext">Сложность переиспользование</li>
+			<li class="ext">Код-лапша</li>
+			<li class="ext">несамодокументированный код</li>
+			<li class="ext">Сложность работы в команде</li>
 		</ol>
 	</section>
+
 	<section class="slide">
 		<h2>Бывает и такое...</h2>
-		<pre>
-			<code><mark>#header</mark> .cont .in
+		<pre><code>
+<mark>#header</mark> .cont .in
 <mark>#block-views-exp-item-search-page</mark>
 .content form
 <mark>#edit-title-wrapper</mark>
@@ -51,9 +65,23 @@ input {
 		</pre>
 		<p class="note">Взято с реального проекта, там такого много</p>
 	</section>
+
+	<section class="slide">
+		<h2>Бывает и такое...</h2>
+		<pre><code>
+div.super-button {
+	background-color: tomato <mark>!important</mark>;
+	color: white <mark>!imporant</mark>;
+	border: none <mark>!important</mark>;
+	font-size: 20px <mark>!important</mark>;
+}
+
+		</code></pre>
+	</section>
+
 	<section class="slide">
 		<h2>Задачи:</h2>
-		<ol>
+		<ol class="next">
 			<li>Единый code-style</li>
 			<li>Масштабирование кода</li>
 			<li>Повторное использование</li>
@@ -72,7 +100,8 @@ input {
 	<pre><code class="bem-in-code">
 		<mark>Б</mark>лок
 		<mark>Э</mark>лемент
-		<mark>М</mark>одификатор</code></pre>
+		<mark>М</mark>одификатор
+	</code></pre>
 	</section>
 	<section class="slide">
 		<h2>Блок</h2>
@@ -93,6 +122,7 @@ input {
 			<li>Необязательность</li>
 		</ol>
 	</section>
+
 	<section class="slide">
 		<h2>Модификатор</h2>
 		<p>отвечает, описывает внешний вид, состояние или поведение.</p>
@@ -104,6 +134,7 @@ input {
 		<code>.text<mark>--alert</mark> <span class="comment">//good</span></code>
 		</pre>
 	</section>
+
 	<section class="slide">
 		<h2>Основные правила:</h2>
 		<ol>
@@ -114,6 +145,89 @@ input {
 			<li>Не используем глобальные стили*</li>
 		</ol>
 	</section>
+
+
+	<section class="slide">
+		<h2 class="shout">Все понятно! Погнали...</h2>
+	</section>
+
+	<section class="slide center">
+		<nav class="menu">
+			<ul class="menu__list">
+				<li class="menu__item"><a href="#" class="menu__link menu__link--active">Home</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">News</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Goods</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">About</a></li>
+			</ul>
+		</nav>
+		<style>
+			.menu.menu {
+				font-family: sans-serif;
+				margin-top: 6em;
+			}
+			.menu__list.menu__list {
+				list-style-type: none;
+				font-size: 0em;
+				text-align: center;
+			}
+			.menu__item.menu__item {
+				display: inline-block;
+				font-size: 30px;
+				text-indent: initial;
+				padding: 0;
+				margin: 0;
+			}
+			.menu__item.menu__item.menu__item:before {
+				padding: 0;
+				margin: 0;
+				content: none;
+			}
+
+			.menu__link.menu__link {
+				color: white;
+				background: tomato;
+				text-decoration: none;
+				display: block;
+				padding: .5em 1.5em;
+			}
+			.menu__link--active.menu__link--active {
+				background-color: #e02200;
+			}
+
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<style>
+			.smaller-code {
+				font-size: 18px;
+			}
+		</style>
+		<pre><code class="smaller-code">
+&lt;nav class="<mark>menu</mark>">
+	&lt;ul class="<mark>menu__list</mark>">
+		&lt;li class="<mark>menu__item</mark>">
+			&lt;a href="#" class="<mark>menu__link menu__link--active</mark>">Home&lt;/a>
+		&lt;/li>
+		&lt;li class="<mark>menu__item</mark>">
+			&lt;a href="#" class="<mark>menu__link</mark>">News&lt;/a>
+		&lt;/li>
+	&lt;/ul>
+&lt;/nav>
+		</code></pre>
+	</section>
+
+
+	<section class="slide slide--owl">
+		<style>
+			.slide--owl {
+				background: #fff url(./pictures/owl.jpg) no-repeat center;
+			}
+		</style>
+	</section>
+
+	<!--
 	<section class="slide">
 		<h2>Схемы именования</h2>
 		<pre>
@@ -124,12 +238,9 @@ input {
 		<code>_available <span class="comment">//no-namespace</span></code>
 		</pre>
 	</section>
-	<section class="slide">
-		<h2 class="shout">Файловая структура</h2>
-	</section>
-	<section class="slide">
-		<img src="pictures/Vitalya_Gora_Testovoe_Frontend.jpg" height="418" width="588" class="cover" alt="">
-	</section>
+	-->
+
+
 	<section class="slide">
 		<h2>Немного кода...</h2>
 		<pre>
@@ -143,6 +254,66 @@ input {
 		</pre>
 		<p class="note next">//элементов элементов не бывает</p>
 	</section>
+
+
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="block <mark>grid--size-large</mark>"&gt;</code>
+		<code>	&lt;a class="<mark>news__link</mark>"&gt;&lt;/a></code>
+		<code>	&lt;div class="<mark>block__content</mark>"&gt;&lt;/div></code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note next">//модификатор и элемент не может существовать сам по себе</p>
+	</section>
+
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="<mark>grid</mark>"&gt;</code>
+		<code>	&lt;div class="<mark>menu</mark>"&gt;</code>
+		<code>		&lt;div class="<mark>grid__col</mark>"&gt;</code>
+		<code>			&lt;div class="<mark>menu__item</mark>"&gt;&lt;/div&gt;</code>
+		<code>		&lt;/div&gt;</code>
+		<code>	&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note next">//можно, но прежде чем такое использовать перекреститесь</p>
+	</section>
+
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="<mark>block</mark>"&gt;</code>
+		<code>	&lt;div class="<mark>block__item block__left</mark>"&gt;&lt;/div></code>
+		<code>	&lt;div class="<mark>block__item block__right</mark>"&gt;&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+		<p class="note next">//вроде и валидно, но лучше так...</p>
+	</section>
+
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;div class="<mark>block</mark>"&gt;</code>
+		<code>	&lt;div class="<mark>block__item block__item--left</mark>"&gt;&lt;/div></code>
+		<code>	&lt;div class="<mark>block__item block__item--right</mark>"&gt;&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Немного стилей...</h2>
+		<pre><code>
+.block {
+	&__item + &__name {
+		<span class="comment">// какие-то стили...</span>
+	}
+}
+		</code></pre>
+		<p class="note next">// не надо так, это не по бэму...</p>
+	</section>
+
 	<section class="slide">
 		<h2>Немного кода...</h2>
 		<pre>
@@ -154,8 +325,9 @@ input {
 		<code>	&lt;/ul&gt;</code>
 		<code>&lt;/div&gt;</code>
 		</pre>
-		<p class="note next">//все элементы - части блока person и отдельно существовать не могут</p>
+		<p class="note">//все элементы - части блока person и отдельно существовать не могут</p>
 	</section>
+
 	<section class="slide">
 		<h2>Немного кода...</h2>
 		<pre>
@@ -168,6 +340,7 @@ input {
 		</pre>
 		<p class="note next">//все элементы принадлежат исключительно этой комнате</p>
 	</section>
+
 	<section class="slide">
 		<h2>Немного кода...</h2>
 		<pre>
@@ -178,93 +351,102 @@ input {
 		<code>	&lt;/div&gt;</code>
 		<code>&lt;/div&gt;</code>
 		</pre>
-		<p class="note next">//верно - desk и laptop могут существовать и вне комнаты</p>
+		<p class="note">//верно - desk и laptop могут существовать и вне комнаты</p>
 	</section>
+
+
 	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
-		<code>&lt;nav class="<mark>menu</mark>"&gt;</code>
-		<code>	&lt;ul class="<mark>menu__list</mark>"&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;1&lt;/li&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;2&lt;/li&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;3&lt;/li&gt;</code>
-		<code>	&lt;/ul&gt;</code>
-		<code>&lt;/nav&gt;</code>
-		</pre>
-		<p class="note next">//верно</p>
+		<h2 class="shout">Поговорим о коллегах</h2>
 	</section>
+
 	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
-		<code>&lt;nav class="<mark>menu--size-large</mark>"&gt;</code>
-		<code>	&lt;ul class="<mark>menu__list</mark>"&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;1&lt;/li&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;2&lt;/li&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;3&lt;/li&gt;</code>
-		<code>	&lt;/ul&gt;</code>
-		<code>&lt;/nav&gt;</code>
-		</pre>
-		<p class="note next">//неверно</p>
-	</section>
-	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
-		<code>&lt;nav class="<mark>menu menu--size-large</mark>"&gt;</code>
-		<code>	&lt;ul class="<mark>menu__list</mark>"&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;1&lt;/li&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;2&lt;/li&gt;</code>
-		<code>		&lt;li class="<mark>menu__item</mark>"&gt;3&lt;/li&gt;</code>
-		<code>	&lt;/ul&gt;</code>
-		<code>&lt;/nav&gt;</code>
-		</pre>
-		<p class="note next">//модификатор не может существовать сам по себе</p>
-	</section>
-	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
-		<code>&lt;div class="<mark>grid</mark>"&gt;</code>
-		<code>	&lt;nav class="<mark>menu</mark>"&gt;</code>
-		<code>		&lt;ul class="<mark>menu__list</mark>"&gt;</code>
-		<code>			&lt;li class="<mark>grid__col menu__item</mark>"&gt;1&lt;/li&gt;</code>
-		<code>			&lt;li class="<mark>grid__col menu__item</mark>"&gt;2&lt;/li&gt;</code>
-		<code>		&lt;/ul&gt;</code>
-		<code>	&lt;/nav&gt;</code>
-		<code>&lt;/div&gt;</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
-		<code>&lt;ul class="<mark>grid menu</mark>"&gt;</code>
-		<code>	&lt;li class="<mark>grid__col menu__item</mark>"&gt;1&lt;/li&gt;</code>
-		<code>	&lt;li class="<mark>grid__col menu__item</mark>"&gt;2&lt;/li&gt;</code>
-		<code>&lt;/ul&gt;</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
+		<h2>Поговорим о коллегах &mdash; контент-менеджер</h2>
+		<ul class="next">
+			<li><mark>Он не должен знать о БЭME!</mark></li>
+		</ul>
+		<pre  class="next">
 		<code>.block {</code>
-		<code>	<mark>&__title</mark> {</code>
-		<code>		<span class="comment">// какие-то стили</span></code>
-		<code>	}</code>
+		<code>	<mark>a</mark> {<span class="comment">/* какие-то стили */</span>}</code>
+		<code>	<mark>p</mark> {<span class="comment">/* какие-то стили */</span>}</code>
+		<code>	<mark>ul</mark> {<span class="comment">/* какие-то стили */</span>}</code>
 		<code>}</code>
 		</pre>
 	</section>
+
+	<section class="slide">
+		<h2>Поговорим о коллегах &mdash; бекенд-девелопер</h2>
+		<ul >
+			<li>Используй нормальный неймспейс для классов</li>
+			<li>Следи за структурой многостраничного сайта, не переусложняй</li>
+			<li><mark>.page-about</mark> &mdash; не делай так!</li>
+			<li>Дроби блоки и переиспользуй чаще</li>
+			<li>не верстай "щоб було"©</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre><code>
+&lt;div class="page <mark>page--about</mark>">
+	&lt;div class="page__header">&lt;/div>
+&lt;/div>
+		</code></pre>
+	</section>
+
 	<section class="slide">
 		<h2>Немного кода...</h2>
 		<pre>
-		<code><mark>.block</mark> {</code>
-		<code>	<mark>&--big</mark> {</code>
-		<code>		.block__title {</code>
-		<code>			<span class="comment">// какие-то стили</span></code>
+		<code>.page {</code>
+		<code>	<mark>&--about</mark> {</code>
+		<code>		<mark>page__header</mark> {</code>
+		<code>		<span class="comment">// какие-то стили</span></code>
 		<code>		}</code>
 		<code>	}</code>
 		<code>}</code>
 		</pre>
 	</section>
+
 	<section class="slide">
-		<h2>Немного кода...</h2>
+		<h2>Файловая структура</h2>
+		<ul>
+			<li>для блока создавать папку нет необходимости*</li>
+			<li>1 блок &mdash; 1 файл</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Стили</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Немного стилей...</h2>
+		<pre>
+		<code>.block {</code>
+		<code>	<mark>&__title</mark> {</code>
+		<code>		<span class="comment">// какие-то стили</span></code>
+		<code>		<mark>&--modificator</mark> {</code>
+		<code>		}</code>
+		<code>	}</code>
+		<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Немного стилей...</h2>
+		<pre>
+		<code>.block {</code>
+		<code>	<mark>&-title</mark> {</code>
+		<code>		<mark>&__text</mark> {</code>
+		<code>			<span class="comment">// какие-то стили</span></code>
+		<code>		}</code>
+		<code>	}</code>
+		<code>}</code>
+		</pre>
+		<p class="next note">//не дробите имя блока, элемента или модификатора</p>
+	</section>
+
+	<section class="slide">
+		<h2>Немного стилей...</h2>
 		<pre>
 		<code><mark>.header</mark> {</code>
 		<code>	<mark>.block</mark> {</code>
@@ -274,9 +456,10 @@ input {
 		<code>	}</code>
 		<code>}</code>
 		</pre>
+		<p class="next note">//блоки напрямую не должны влиять на другие блоки</p>
 	</section>
 	<section class="slide">
-		<h2>Немного кода...</h2>
+		<h2>Немного стилей...</h2>
 		<pre>
 		<code><mark>div.block</mark> {</code>
 		<code>	&__title {</code>
@@ -284,9 +467,12 @@ input {
 		<code>	}</code>
 		<code>}</code>
 		</pre>
+
+		<p class="next note">//подвязываемся только к селектору класса*</p>
 	</section>
+
 	<section class="slide">
-		<h2>Немного кода...</h2>
+		<h2>Немного стилей...</h2>
 		<pre>
 		<code><mark>.visible.block</mark> {</code>
 		<code>	&__title {</code>
@@ -294,17 +480,10 @@ input {
 		<code>	}</code>
 		<code>}</code>
 		</pre>
+		<p class="next note">//блоки напрямую не должны влиять на другие блоки</p>
 	</section>
-	<section class="slide">
-		<h2>Немного кода...</h2>
-		<pre>
-		<code>.block {</code>
-		<code>	<mark>a</mark> {<span class="comment">/* какие-то стили */</span>}</code>
-		<code>	<mark>p</mark> {<span class="comment">/* какие-то стили */</span>}</code>
-		<code>	<mark>ul</mark> {<span class="comment">/* какие-то стили */</span>}</code>
-		<code>}</code>
-		</pre>
-	</section>
+
+	<!--
 	<section class="slide">
 		<div>
 			<h2>Проблемы со стилями:</h2>
@@ -315,9 +494,22 @@ input {
 			</ul>
 		</div>
 	</section>
+	-->
+	<section class="slide">
+		<h2>Что есть блок?</h2>
+		<ul>
+			<li>Заголовки</li>
+			<li>Кнопки</li>
+			<li>Поля формы</li>
+			<li>Ссылки</li>
+			<li>Иконки</li>
+			<li>...</li>
+		</ul>
+	</section>
+
 	<section class="slide">
 		<div>
-			<h2>Ошибки разработчиков:</h2>
+			<h2>Резюмируем ошибки:</h2>
 			<ul class="custom-list">
 				<li class="next active">Элемент элемента</li>
 				<li class="next active">Элемент вне блока</li>
@@ -329,8 +521,9 @@ input {
 	</section>
 	<section class="slide">
 		<div>
-			<h2>Ошибки разработчиков:</h2>
+			<h2>Резюмируем ошибки:</h2>
 			<ul class="custom-numbered-list">
+				<li class="next active">Жирные блоки</li>
 				<li class="next active">Блок, вложенный в себя</li>
 				<li class="next active">Использование стилевых классов в JS</li>
 				<li class="next active">Использование классов-хелперов «как-бутстрап»: <code>&lt;ul class="list pointer left colorred"&gt;</code></li>
@@ -341,7 +534,7 @@ input {
 	</section>
 	<section class="slide">
 		<div>
-			<h2>Ошибки разработчиков:</h2>
+			<h2>Резюмируем ошибки:</h2>
 			<ul class="custom-numbered-list">
 				<li class="next active">Oldschool reborn (высокая специфичность и класс только на блоке)</li>
 				<li class="next active">Looooooooong naming</li>
@@ -355,7 +548,7 @@ input {
 			<li><a href="http://bem.info/">bem.info</a></li>
 			<li><a href="http://bem.info/forum/">bem.info/forum/</a></li>
 			<li><a href="http://getbem.com/">getbem.com/</a></li>
-			<li></li>
+			<li class="next"><a href="//google.ru">google</a> <span class="comment">// куда уж без него</span></li>
 		</ul>
 	</section>
 	<section class="slide">
