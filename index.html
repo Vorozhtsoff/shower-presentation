@@ -220,10 +220,22 @@ div.super-button {
 	<section class="slide slide--owl">
 		<style>
 			.slide--owl {
-				background: #fff url(./pictures/owl.jpg) no-repeat center;
+				background: #fff url(./pictures/owl-2.png) no-repeat center;
+				background-size: contain;
 			}
 		</style>
 	</section>
+	<style>
+		.shout--white {
+			color: #fff !important;
+		}
+	</style>
+
+	<section class="slide black">
+		<h2 class="shout shout--white">Немного<br>безумия</h2>
+	</section>
+
+
 
 	<!--
 	<section class="slide">
@@ -237,6 +249,19 @@ div.super-button {
 		</pre>
 	</section>
 	-->
+
+	<div class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>&lt;nav class="<mark>menu__wrapper</mark>"&gt;</code>
+		<code>	&lt;ul class="<mark>menu</mark>"&gt;</code>
+		<code>		<span class="comment">//остальной код</span></code>
+		<code>	&lt;/ul&gt;</code>
+		<code>&lt;/nav&gt;</code>
+		</pre>
+
+		<p class="note next">// так нельзя</p>
+	</div>
 
 
 	<section class="slide">
@@ -374,12 +399,13 @@ div.super-button {
 	<section class="slide">
 		<h2>Поговорим о коллегах &mdash; бекенд-девелопер</h2>
 		<ul >
-			<li>Используй нормальный неймспейс для классов</li>
+			<li>Используй понятный неймспейс для классов</li>
 			<li>Следи за структурой многостраничного сайта, не переусложняй</li>
-			<li><mark>.page-about</mark> &mdash; не делай так!</li>
+			<li><mark>Уникальные классыдля каждой страницы</mark> &mdash; одумайся!</li>
 			<li>Дроби блоки и переиспользуй чаще</li>
 			<li>не верстай "щоб було"©</li>
 		</ul>
+		<p class="note next">// Каждый frontender должен попробовать натянуть свою верстку</p>
 	</section>
 
 	<section class="slide">
@@ -405,10 +431,24 @@ div.super-button {
 	</section>
 
 	<section class="slide">
+		<h2>Немного кода...</h2>
+		<pre>
+		<code>.page {</code>
+		<code>	<mark>&--about</mark> {</code>
+		<code>		<mark>^&__header</mark> {</code>
+		<code>		<span class="comment">// какие-то стили</span></code>
+		<code>		}</code>
+		<code>	}</code>
+		<code>}</code>
+		</pre>
+		<p class="note">// С плагином postcss-nested-ancestors</p>
+	</section>
+
+	<section class="slide">
 		<h2>Файловая структура</h2>
 		<ul>
 			<li>для блока создавать папку нет необходимости*</li>
-			<li>1 блок &mdash; 1 файл</li>
+			<li><mark>1 блок &mdash; 1 файл</mark></li>
 		</ul>
 	</section>
 
@@ -433,7 +473,7 @@ div.super-button {
 		<h2>Немного стилей...</h2>
 		<pre>
 		<code>.block {</code>
-		<code>	<mark>&-title</mark> {</code>
+		<code>	<mark class="important">&-title</mark> {</code>
 		<code>		<mark>&__text</mark> {</code>
 		<code>			<span class="comment">// какие-то стили</span></code>
 		<code>		}</code>
@@ -503,6 +543,19 @@ div.super-button {
 			<li>Иконки</li>
 			<li>...</li>
 		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>О БЭМ-префиксах</h2>
+		<ul>
+			<li>c-</li>
+			<li>b-</li>
+			<li>l-</li>
+			<li>js-</li>
+			<li>is-</li>
+			<li>has-</li>
+		</ul>
+		<pre><code>.c-header .c-header__el .c-header--mode</code></pre>
 	</section>
 
 	<section class="slide">
